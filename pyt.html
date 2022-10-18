@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="iso-8859-1" name="viewport" content="width=device-width, intial-scale = 1" />
+    <title>
+        PitagorasTheorem
+    </title>
+</head>
+<body>
+    <div>
+        <p class="titulo">Teorema de pitagoras</p><br />
+        <b>Descrição:</b><br />
+        <p> Teorema de Pitagóras é uma formula para encontrar o valor numerico de um lado num triângulo retângulo, conhecendo dois de seus lados.</p>
+    </div>
+    <div>
+        <canvas id="canva" width="900" height="400"></canvas>
+    </div>
+        <form>
+            cateto A:<input type="text" name="catA" />
+            cateto B:<input type="text" name="catB" />
+            hipotenusa:<input type="text" name="hip" /><br />
+            <input type="button" name="result" value="solve" onclick="pitagoras()"/>
+        </form>
+    <script>
+        var c = document.getElementById("canva");
+        var p = c.getContext("2d");
+        p.moveTo(55, 55);
+        p.lineTo(55, 250);
+        p.moveTo(55, 250);
+        p.lineTo(700, 250);
+        p.lineTo(55, 55);
+        p.stroke();
+        function pitagoras() {
+            var result;
+            var a = document.getElementsByName("catA")[0].value;
+            var b = document.getElementsByName("catB")[0].value;
+            var h = document.getElementsByName("hip")[0].value;
+            if (Number(a) == "") {
+                result = Math.sqrt(Math.pow(parseFloat(h), 2) - Math.pow(parseFloat(b), 2));
+                document.getElementsByName("catA")[0].value = result;
+            } else if (Number(b) == "") {
+                result = Math.sqrt(Math.pow(parseFloat(h), 2) - Math.pow(parseFloat(a), 2));
+                document.getElementsByName("catB")[0].value = result;
+            } else {
+                result = Math.sqrt(Math.pow(parseFloat(a), 2) + Math.pow(parseFloat(b), 2));
+                document.getElementsByName("hip")[0].value = result;
+            }
+        }
+    </script>
+</body>
+</html>
