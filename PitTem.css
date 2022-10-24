@@ -1,0 +1,24 @@
+﻿input{
+    font-family:Arial;
+    text-align:center;
+}
+.titulo{
+    font-size:2cm;
+    font-family:'Times New Roman';
+    text-align:center;
+}
+.atrib{
+    text-align:center;
+    background-color:gray;
+    box-shadow:rgb(95, 94, 94, 0,45) 10px 10px initial;
+    border:2px solid gray;
+    border-radius:30px;
+}
+.intro{
+    font-family:Arial;
+    font-size:1.19cm;
+    text-align:center;
+}
+triangle{
+    text-align:center;
+}
